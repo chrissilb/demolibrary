@@ -41,8 +41,7 @@ Once the User is inactive for more than 5 seconds a countdown starts from 30 sec
 
 Code:
 ```Java
-@Tick(interval=1000, invocations=30, 
-      activateMethod="startCountdown", deactivateMethod="stopCountdown")
+@Tick(interval=1000, invocations=30, activateMethod="startCountdown", deactivateMethod="stopCountdown")
 public void doCountdown() {
 	if (--countdownCounter > 0)
 		lblUserStatus.setText("Automatic logout in " + countdownCounter + " seconds.");
