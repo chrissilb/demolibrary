@@ -9,7 +9,7 @@ Shows especially:
 ## Highlights
 Once the login dialog is open for more than 5 seconds a "support message" occurs within the status line:
 
-!(pics/autologout.png)
+![autologout](pics/autologout.png)
 
 
 Once the User is inactive for more than 5 seconds a countdown starts from 30 seconds. Automatic logout happens after but can be interrupted by user activity:
