@@ -1,6 +1,6 @@
 # demolibrary
 
-Library demonstrator of the esc component framework
+Library demonstrator of the ESC component framework
 
 Shows especially:
 * Extensions
