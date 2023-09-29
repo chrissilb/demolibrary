@@ -45,6 +45,11 @@
 		</dependency>		
 	</dependencies>
 	<build>
+		<resources>
+			<resource>
+				<directory>src/main/gen</directory>
+			</resource>
+		</resources>
 		<pluginManagement>
 			<plugins>
 			</plugins>
