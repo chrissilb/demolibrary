@@ -48,6 +48,7 @@
 		<resources>
 			<resource>
 				<directory>src/main/gen</directory>
+				<excludes></excludes>
 			</resource>
 		</resources>
 		<pluginManagement>
