@@ -15,9 +15,6 @@
 	    	<id>chsi</id>
 	      	<name>Christian Silberbauer</name>
 	      	<email>christian.silberbauer@gwasch.de</email>
-	      	<properties>
-	        	<active>true</active>
-	      	</properties>
 		</developer>
 	</developers>	
 		
@@ -26,6 +23,7 @@
 		<maven.compiler.source>20</maven.compiler.source>
 		<maven.compiler.target>20</maven.compiler.target>
 	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
@@ -42,17 +40,14 @@
 		    <groupId>org.slf4j</groupId>
 		    <artifactId>slf4j-nop</artifactId>
 		    <version>2.0.9</version>
-		</dependency>		
+		</dependency>	
 	</dependencies>
 	<build>
-		<resources>
+<!--		<resources>
 			<resource>
 				<directory>src/main/gen</directory>
-				<excludes>
-					<exclude>*.class</exclude>
-				</excludes>
 			</resource>
-		</resources>
+		</resources>-->
 		<pluginManagement>
 			<plugins>
 			</plugins>
