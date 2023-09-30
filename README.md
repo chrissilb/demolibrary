@@ -15,7 +15,7 @@ Code:
 ```Java
 @Extension(type=OpacFrameAuthentification.class, extendz=OpacFrame.class) …
 public class OpacFrameAuthentificationImpl { …
-   @Within(interval=5000, methodName="loginSupport")
+   @Within(interval=3000, methodName="loginSupport")
    public boolean login() {
       LoginDialog ld = InstanceAllocator.create(LoginDialog.class, 
          core.getOpacFrameImpl(), core.getLibrary());
