@@ -37,7 +37,8 @@ public class LoginDialogImpl extends JDialog {
 
 	public LoginDialogImpl(JFrame parent, Library library) {
 		super(parent);
-		
+
+		setLocation(parent.getX() + 30, parent.getY() + 30);
 		this.library = library;
 		this.user = null;
 	}
@@ -46,6 +47,7 @@ public class LoginDialogImpl extends JDialog {
 		setModal(true);
 		setTitle("Login");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
 		
 		setLayout(new GridLayout(3, 2));
 		

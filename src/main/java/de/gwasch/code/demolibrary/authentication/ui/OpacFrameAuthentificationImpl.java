@@ -124,8 +124,6 @@ public class OpacFrameAuthentificationImpl {
 		statuspane.add(lblUserStatus);
 	
 		core.getOpacFrameImpl().add(BorderLayout.SOUTH, statuspane);
-		
-		
 	}
 	
 	
@@ -145,10 +143,9 @@ public class OpacFrameAuthentificationImpl {
 	
 //	@After(interval=10000, methodName="after2")	
 //	@After(interval=1000, methodName="after1")
-	@Within(interval=5000, methodName="loginSupport")
+	@Within(interval=3000, methodName="loginSupport")
 	public boolean login() {
 //		thiz.delay();
-//		LoginDialogImpl ld = new LoginDialogImpl(core.getOpacFrameImpl(), core.getLibrary());
 		LoginDialog ld = InstanceAllocator.create(LoginDialog.class, core.getOpacFrameImpl(), core.getLibrary());
 		ld.init();
 		
@@ -164,7 +161,6 @@ public class OpacFrameAuthentificationImpl {
 	}
 	
 	public void loginSupport() {
-//		System.out.println(InstanceAllocator.getInvocationPN().networkToString());
 		System.out.println("loginSupport, " + TimeUtil.timestamp());
 		lblUserStatus.setText("Please enter username and password.");
 	}
@@ -180,7 +176,7 @@ public class OpacFrameAuthentificationImpl {
 	public void startAutoLogout() {
 		assert core.getUser() != null;
 		thiz.stopLowTrafficObservation();
-		countdownCounter = 30;
+		countdownCounter = 10;
 		thiz.startCountdown();
 		thiz.startHighTrafficObservation();
 	}
@@ -193,11 +189,9 @@ public class OpacFrameAuthentificationImpl {
 		thiz.updateView();
 	}
 	
-//	@Tick(interval=1000, invocations=30)
-//	@Tick2(interval=1000, invocations=30, activateMethod="startCountdown", deactivateMethod="stopCountdown")
-	@Tick(interval=1000, invocations=30, activateMethod="startCountdown", deactivateMethod="stopCountdown")
+//	@Tick2(interval=1000, invocations=10, activateMethod="startCountdown", deactivateMethod="stopCountdown")
+	@Tick(interval=1000, invocations=10, activateMethod="startCountdown", deactivateMethod="stopCountdown")
 	public void doCountdown() {
-//		System.out.println("doCountdown, " + TimeUtil.timestamp());		
 
 		countdownCounter--;
 
