@@ -43,11 +43,6 @@
 		</dependency>	
 	</dependencies>
 	<build>
-<!--		<resources>
-			<resource>
-				<directory>src/main/gen</directory>
-			</resource>
-		</resources>-->
 		<pluginManagement>
 			<plugins>
 			</plugins>
@@ -62,7 +57,7 @@
 				<configuration>
 					<!--<inputFolder>src/main/java</inputFolder>-->
 					<!--<basePackageName>de.gwasch.code.demolibrary</basePackageName>-->
-					<!--<outputFolder>src/main/gen</outputFolder>-->
+					<!--<outputFolder>target/generated-sources</outputFolder>-->
 				</configuration>
 				<executions>
 					<execution>
