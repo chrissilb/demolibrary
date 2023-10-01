@@ -52,7 +52,6 @@ public void doCountdown() {
 ## Installation
 See https://github.com/chrissilb/escframework#installation
 
-In eclipse target/generated-sources must be added as source folder. In IntelliJ it simply should work.
 
 ## Usage
 See https://gwasch.de/escframework.php - "Folien" (only available in German so far)
