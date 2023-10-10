@@ -1,36 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+		
+  	<parent>
+	    <groupId>de.gwasch.code.parent</groupId>
+	    <artifactId>parent</artifactId>
+	    <version>1.0.0</version>
+  	</parent>
+  	
 	<groupId>de.gwasch.code.demolibrary</groupId>
 	<artifactId>demolibrary</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	
 	<name>demolibrary</name>
+	<description>Library demonstrator of the ESC component framework</description>
 	<url>http://gwasch.de</url>
 	
 	<developers>
 		<developer>
-	    	<id>chsi</id>
-	      	<name>Christian Silberbauer</name>
-	      	<email>christian.silberbauer@gwasch.de</email>
+			<name>Christian Silberbauer</name>
+			<email>christian.silberbauer@gwasch.de</email>
 		</developer>
-	</developers>	
+	</developers>
 		
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>20</maven.compiler.source>
-		<maven.compiler.target>20</maven.compiler.target>
-	</properties>
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>http://www.opensource.org/licenses/mit-license.php</url>
+		</license>
+	</licenses>
 	
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
 		<dependency>
 			<groupId>de.gwasch.code.escframework</groupId>
 			<artifactId>escframework</artifactId>
@@ -43,10 +42,6 @@
 		</dependency>	
 	</dependencies>
 	<build>
-		<pluginManagement>
-			<plugins>
-			</plugins>
-		</pluginManagement>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -55,7 +50,7 @@
 				<executions>
 					<execution>
 						<id>add-source</id>
-						<phase>generate-sources</phase>
+<!--						<phase>generate-sources</phase>-->
 						<goals>
 							<goal>add-source</goal>
 						</goals>
@@ -71,7 +66,7 @@
 				<groupId>de.gwasch.code.escframework</groupId>
 				<artifactId>escifgen</artifactId>
 				<version>1.0.0</version>
-				<extensions>true</extensions>
+<!--				<extensions>true</extensions>-->
 				<!-- NOTE: attribute names must be used, not the property name -->
 				<configuration>
 					<!--<inputFolder>src/main/java</inputFolder>-->
@@ -80,7 +75,7 @@
 				</configuration>
 				<executions>
 					<execution>
-						<phase>generate-sources</phase>
+<!--						<phase>generate-sources</phase>-->
 						<goals>
 							<goal>ifgen</goal>
 						</goals>
