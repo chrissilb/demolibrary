@@ -24,7 +24,7 @@ import de.gwasch.code.escframework.components.annotations.Tick;
 import de.gwasch.code.escframework.components.annotations.Within;
 import de.gwasch.code.escframework.components.events.InvocationEvent;
 import de.gwasch.code.escframework.components.utils.InstanceAllocator;
-import de.gwasch.code.escframework.events.patterns.CompareCondition;
+import de.gwasch.code.escframework.events.patterns.RangeCondition;
 import de.gwasch.code.escframework.events.patterns.Rule;
 import de.gwasch.code.escframework.events.patterns.RuleBuilder;
 import de.gwasch.code.escframework.events.patterns.RuleMode;
@@ -58,7 +58,7 @@ public class OpacFrameAuthentificationImpl {
 		.name("lowTraffic")
 		.triggerInterval(5000)
 		.maxTriggerCount(0)
-		.triggerCountCompareCondition(CompareCondition.LE_AFTER)
+		.rangeCondition(RangeCondition.LE_AFTER)
 		.triggerPatternEvent(new InvocationEvent() {
 			public boolean equals(Object obj) {
 				return obj instanceof InvocationEvent;
@@ -79,7 +79,7 @@ public class OpacFrameAuthentificationImpl {
 		.name("highTraffic")
 		.triggerInterval(2000000)
 		.maxTriggerCount(0)
-		.triggerCountCompareCondition(CompareCondition.ONCE_MT)
+		.rangeCondition(RangeCondition.ONCE_MT)
 		.triggerPatternEvent(new InvocationEvent() {			
 			public boolean equals(Object obj) {
 				boolean ret = obj instanceof InvocationEvent;
