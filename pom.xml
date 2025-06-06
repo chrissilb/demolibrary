@@ -33,7 +33,7 @@
 		<dependency>
 			<groupId>de.gwasch.code.escframework</groupId>
 			<artifactId>escframework</artifactId>
-			<version>0.0.2</version>
+			<version>0.0.3</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.slf4j</groupId>
@@ -65,7 +65,7 @@
 			<plugin>
 				<groupId>de.gwasch.code.escframework</groupId>
 				<artifactId>escifgen</artifactId>
-				<version>0.0.2</version>
+				<version>0.0.3</version>
 				<!-- NOTE: attribute names must be used, not the property name -->
 				<configuration>
 					<!--<inputFolder>src/main/java</inputFolder>-->
