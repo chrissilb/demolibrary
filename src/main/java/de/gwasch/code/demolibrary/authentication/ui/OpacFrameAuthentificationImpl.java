@@ -146,8 +146,8 @@ public class OpacFrameAuthentificationImpl {
 	@Within(interval=3000, methodName="loginSupport")
 	public boolean login() {
 //		thiz.delay();
-		LoginDialog ld = InstanceAllocator.create(LoginDialog.class, core.getOpacFrameImpl(), core.getLibrary());
-		ld.init();
+		LoginDialog ld = InstanceAllocator.create(LoginDialog.class, core.getOpacFrameImpl());
+		ld.init(core.getLibrary());
 		
 		boolean success = ld.getUser() != null;
 		if (success) {

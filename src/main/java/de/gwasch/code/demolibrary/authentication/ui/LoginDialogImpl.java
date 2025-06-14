@@ -35,15 +35,16 @@ public class LoginDialogImpl extends JDialog {
 	private JTextField txtUser;
 	private JPasswordField txtPassword;
 
-	public LoginDialogImpl(JFrame parent, Library library) {
+	public LoginDialogImpl(JFrame parent) {
 		super(parent);
 
 		setLocation(parent.getX() + 30, parent.getY() + 30);
-		this.library = library;
-		this.user = null;
 	}
 	
-	public void init() {
+	public void init(Library library) {
+		this.library = library;
+		this.user = null;
+		
 		setModal(true);
 		setTitle("Login");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
